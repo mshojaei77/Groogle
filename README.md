@@ -1,6 +1,4 @@
 # Groogle
-Groq + Google 
-# Groogle : Groq + Google
 
 Groogle is a Python application that combines the capabilities of the Groq API and the Google search engine to provide a comprehensive solution for information retrieval and processing. The application uses the Groq API for chat completions and the Google search engine to find relevant web results. It then uses a web scraper to extract data from these results and uses the Groq API again to generate a response based on the prompt and the extracted data.
 
