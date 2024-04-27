@@ -1,3 +1,5 @@
+# Groogle : Groq + Google
+
 from groq import Groq
 import os
 from dotenv import load_dotenv
@@ -27,8 +29,8 @@ with ThreadPoolExecutor(max_workers=5) as executor:
         data = future.result() # Get the result of the future
         scraper.results[url] = data # Store the result in the results dictionary
 
-for url, data in scraper.results.items():
-        print(f" \n {url}: \n ```{data}``` ")
+#for url, data in scraper.results.items():
+#        print(f" \n {url}: \n ```{data}``` ")
 
 chat_completion = client.chat.completions.create(messages=[{"role": "user","content": f"answer this prompt '{prompt}' using following web results: \n {scraper.results}" }],model="llama3-70b-8192",)
 answer = chat_completion.choices[0].message.content
