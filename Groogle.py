@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 load_dotenv()
 API_KEY = os.getenv('groq_api_key')
 
-prompt = "write a python app for calculator "
+prompt = input("ask me anything: ")
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"),)
 
 query_generator = client.chat.completions.create(messages=[{"role": "user","content": f"generate only 1 google search query for this prompt ({prompt}) to get help, put it inside quotes",}],model="llama3-8b-8192",)
